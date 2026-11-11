@@ -1,0 +1,26 @@
+name: Cask checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: macos-latest
+    steps:
+      - name: Set up Homebrew with this tap
+        uses: Homebrew/actions/setup-homebrew@main
+
+      - name: Check style
+        run: brew style unstoppableweb/tap
+
+      - name: Audit casks
+        run: |
+          shopt -s nullglob
+          for cask in "$(brew --repository unstoppableweb/tap)"/Casks/*.rb; do
+            brew audit --cask --strict --online "unstoppableweb/tap/$(basename "$cask" .rb)"
+          done
