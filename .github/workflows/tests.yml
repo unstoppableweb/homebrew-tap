@@ -15,6 +15,10 @@ jobs:
       - name: Set up Homebrew with this tap
         uses: Homebrew/actions/setup-homebrew@main
 
+      # Homebrew 6+ refuses to load casks from an untrusted third-party tap.
+      - name: Trust this tap
+        run: brew trust unstoppableweb/tap
+
       - name: Check style
         run: brew style unstoppableweb/tap
 

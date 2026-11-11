@@ -9,9 +9,6 @@ Official [Homebrew](https://brew.sh) tap for the
 brew install --cask unstoppableweb/tap/unstoppable-code
 ```
 
-The cask is not published yet. This command will work once
-`Casks/unstoppable-code.rb` is added to this repository.
-
 Use the fully qualified name above. Homebrew trusts a cask from a third-party
 tap when you install it by its full name.
 
