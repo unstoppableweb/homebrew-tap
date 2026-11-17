@@ -1,9 +1,9 @@
 cask "unstoppable-code" do
   arch arm: "arm64", intel: "x64"
 
-  version "1.22.0"
-  sha256 arm:   "dd57ad5b2b9c120d8a761730da66f64e84560106b644fd7ff21d556005f4158c",
-         intel: "86324662447b4b51602e54458c108b828537e9dcb859579aa8cac26d41ab5d77"
+  version "1.23.0"
+  sha256 arm:   "c140fbcb0f007d50c0d9b3c735355ef28531b477e787b0efbd41063c725bbbf7",
+         intel: "34decc8320e7e264b8be3fc314a7eac3db6c30ecb691288ef01bbf5c3bfbdf54"
 
   url "https://releases.unstoppable.ai/desktop/unstoppable-code/#{version}/unstoppable-code-#{version}-mac-#{arch}.dmg"
   name "Unstoppable Code"
